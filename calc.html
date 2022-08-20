@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    
+    <style>
+        main{
+
+            margin-left: 35%;
+            width: 260px;
+            padding: 2%;
+            margin-top: 7%;
+            border: rgba(17, 74, 199, 0.712) 2px solid;
+            border-radius :20%;
+            background-color: rgb(215, 239, 250);
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3) , 0 6px 20px 0 rgba(0, 0, 0, 0.29);
+
+
+        }
+
+        #firstrow{
+            text-align: center;
+        }
+        #firstrow > * {
+            display: inline-block;
+            text-align: center;
+            font-size: x-large;
+            
+
+        }
+
+        .rbuttons >* {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-top: 4px;
+            border: none;
+            background-color: aliceblue;
+            font-weight: bolder;
+            font-size: larger;
+            
+        }
+
+        .op{
+            background-color: rgb(120, 209, 209);
+        }
+
+        #result{
+            text-align: center;
+        }
+
+
+            
+    </style>
+    
+</head>
+
+
+<body>
+
+    <main>
+
+        <div id="firstrow">
+            <h3 id="fn"></h3>
+            <h3 id="operator"></h3>
+            <h3 id="sn"></h3>
+            <br>
+        </div>
+    
+
+        <div class="rbuttons">
+
+            <input type="button" value="9" onclick="handle_buttons('9')">
+            <input type="button" value="8" onclick="handle_buttons('8')">
+            <input type="button" value="7" onclick="handle_buttons('7')">
+            <input type="button" value="+" onclick="handle_operators('+')" class="op">
+            <br>
+
+        </div>
+
+
+        <div class="rbuttons">
+
+            <input type="button" value="6" onclick="handle_buttons('6')">
+            <input type="button" value="5" onclick="handle_buttons('5')">
+            <input type="button" value="4" onclick="handle_buttons('4')">
+            <input type="button" value="-" onclick="handle_operators('-')" class="op">
+            <br>
+        </div>
+
+
+        
+        <div class="rbuttons">
+
+            <input type="button" value="3" onclick="handle_buttons('3')">
+            <input type="button" value="2" onclick="handle_buttons('2')">
+            <input type="button" value="1" onclick="handle_buttons('1')">
+            <input type="button" value="/"  onclick="handle_operators('/')" class="op">
+            <br>
+        </div>
+
+
+        <div class="rbuttons">
+
+            <input type="button" value="0" onclick="handle_buttons('0')">
+            <input type="button" value="x" onclick="handle_operators('*')" class="op">
+            <input type="button" value="%" onclick="handle_operators('%')" class="op">
+            <input type="button" value="="  onclick="show_result()" class="op" >
+            <br>
+
+        </div>
+
+        <div>
+            <h2 id="result"></h2>
+        </div>
+
+        
+
+        
+
+
+        
+
+    </main>
+
+
+
+<script src="script.js"></script>
+</body>
+    
+
+</html>
