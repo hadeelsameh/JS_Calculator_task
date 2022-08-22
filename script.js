@@ -16,11 +16,16 @@ function handle_buttons(Button_value){
     if(operator == null){
 
         if(first_number == null){
+            if(result !== null){
+                document.getElementById('sn').innerText=' ';
+                document.getElementById('result').innerText=' ';
+                document.getElementById('operator').innerText=' ';
+            }
             first_number = Button_value;
         }else{
             first_number = first_number + Button_value;
         }
-        document.getElementById('fn').innerText=first_number
+        document.getElementById('fn').innerText=first_number;
 
         
         
@@ -29,11 +34,10 @@ function handle_buttons(Button_value){
 
         if(second_number == null){
             second_number = Button_value;
-            document.getElementById('fn').innerText=first_number
         }else{
             second_number = second_number + Button_value;
         }
-        document.getElementById('sn').innerText=second_number
+        document.getElementById('sn').innerText=second_number;
 
         
     
